@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HACK LIST</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .hack-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        .hack-item {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            position: relative;
+        }
+        .hack-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer; /* Change cursor to pointer to indicate clickable image */
+        }
+        .hack-title {
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            font-style: italic;
+            background: linear-gradient(45deg, #007BFF, #00FF7F);
+            color: #fff;
+        }
+        .price {
+            display: none;
+            font-size: 16px;
+            padding: 10px;
+            background-color: #FF7F50;
+            color: white;
+            border-radius: 0 0 10px 10px;
+        }
+        .product-checkbox {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            transform: scale(1.5); /* Scale the checkbox */
+        }
+        .next-button {
+            display: block;
+            margin: 20px auto;
+            padding: 15px 30px;
+            font-size: 1em;
+            color: white;
+            background: linear-gradient(135deg, #FF416C, #FF4B2B);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none; /* Make sure the link doesn't have underlines */
+        }
+    </style>
+</head>
+<body>
+    <h1>HACK LIST</h1>
+    <div class="hack-container">
+        <div class="hack-item" onclick="togglePrice('price1')">
+            <input type="checkbox" class="product-checkbox" id="apple-hack">
+            <label for="apple-hack"></label>
+            <img src="apple.jpeg" alt="Apple Hack">
+            <div class="hack-title">APPLE HACK</div>
+            <div id="price1" class="price">Price: 300rs</div>
+        </div>
+        <div class="hack-item" onclick="togglePrice('price2')">
+            <input type="checkbox" class="product-checkbox" id="gems-hack">
+            <label for="gems-hack"></label>
+            <img src="gems.jpeg" alt="Gems Hack">
+            <div class="hack-title">Gems Hack</div>
+            <div id="price2" class="price">Price: 100rs</div>
+        </div>
+        <div class="hack-item" onclick="togglePrice('price3')">
+            <input type="checkbox" class="product-checkbox" id="crash-hack">
+            <label for="crash-hack"></label>
+            <img src="crash.jpeg" alt="Crash Hack">
+            <div class="hack-title">Crash Hack</div>
+            <div id="price3" class="price">Price: 500rs</div>
+        </div>
+        <div class="hack-item" onclick="togglePrice('price4')">
+            <input type="checkbox" class="product-checkbox" id="thimble-hack">
+            <label for="thimble-hack"></label>
+            <img src="thimble.jpeg" alt="Thimble Hack">
+            <div class="hack-title">Thimble Hack</div>
+            <div id="price4" class="price">Price: 1,000rs</div>
+        </div>
+    </div>
+
+    <a href="cyber.html" class="next-button">Next</a>
+
+    <script>
+        function togglePrice(priceId) {
+            var priceElement = document.getElementById(priceId);
+            priceElement.style.display = priceElement.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
